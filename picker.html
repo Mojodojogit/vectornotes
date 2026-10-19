@@ -26,13 +26,14 @@
   // Windows-App: Die App öffnet diese Seite im Browser, weil die Google-Dateiauswahl nur von einer echten
   // Webadresse aus funktioniert. Zugangsschlüssel und Rückkanal kommen im Fragment (#…, geht an keinen Server).
   // Die Auswahl (nur Kennungen und Namen) geht an den lokalen Empfänger der App auf 127.0.0.1 zurück.
+  // Kein Entwicklerschlüssel: mit Zugangs-Token braucht die Auswahl keinen, und Google lehnt ihn hier als „ungültig“ ab.
   const p = new URLSearchParams(location.hash.slice(1))
   history.replaceState(null, '', location.pathname)
   const port = Number(p.get('port')), state = p.get('state') || '', token = p.get('token'), key = p.get('key'), appId = p.get('app')
   const title = document.getElementById('title'), text = document.getElementById('text'), again = document.getElementById('again')
   const back = q => location.replace(`http://127.0.0.1:${port}/picked?state=${encodeURIComponent(state)}&${q}`)
   const fail = m => { title.textContent = 'Das hat nicht geklappt'; text.textContent = m }
-  if (!(port > 1023 && port < 65536) || !token || !key || !/^\d+$/.test(appId || '')) fail('Bitte die Dateiauswahl in Vector Notes neu öffnen.')
+  if (!(port > 1023 && port < 65536) || !token || !/^\d+$/.test(appId || '')) fail('Bitte die Dateiauswahl in Vector Notes neu öffnen.')
   else {
     const s = document.createElement('script')
     s.src = 'https://apis.google.com/js/api.js'
@@ -45,7 +46,7 @@
     new g.PickerBuilder()
       .addView(new g.DocsView(g.ViewId.DOCS).setIncludeFolders(true).setSelectFolderEnabled(false))
       .enableFeature(g.Feature.MULTISELECT_ENABLED)
-      .setOAuthToken(token).setDeveloperKey(key).setAppId(appId)
+      .setOAuthToken(token).setAppId(appId)
       .setLocale('de').setTitle('Aus Google Drive einfügen')
       .setCallback(d => {
         if (d.action === g.Action.PICKED) {
