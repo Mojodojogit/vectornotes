@@ -24,7 +24,7 @@
 <body>
 <main>
 <h1>Vector Notes</h1>
-<p class="muted">Datenschutzerklärung · Privacy Policy · Stand / Last updated: 05.11.2026</p>
+<p class="muted">Datenschutzerklärung · Privacy Policy · Stand / Last updated: 06.11.2026</p>
 <nav><a href="#de">Deutsch</a><a href="#en">English</a></nav>
 
 <section id="de">
@@ -64,11 +64,36 @@ es gilt die <a href="https://policies.google.com/privacy?hl=de">Datenschutzerkl�
 Verbindung jederzeit in der App trennen oder den Zugriff unter
 <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> widerrufen.</p>
 
+<h3>2b. Verbindung zu Moodle oder WebDAV (freiwillig)</h3>
+<p>Du kannst die App mit der Moodle-Lernplattform deiner Schule oder Hochschule bzw. mit einem WebDAV-Speicher (z. B. Nextcloud)
+verbinden. Die Anmeldung erfolgt direkt bei dieser Website und nur über eine verschlüsselte Verbindung (https). Auf deinem Gerät
+werden Adresse, Benutzername und der Zugang (Moodle-Token bzw. App-Passwort) gespeichert, der Zugang verschlüsselt im sicheren
+Speicher des Systems (Android Keystore bzw. Windows DPAPI). Kursdateien lädt die App von dort auf dein Gerät herunter; in Moodle
+wird nur gelesen. Diese Daten gehen weder an den Entwickler noch in den Cloud-Abgleich. Verantwortlich für die Website ist ihr
+Betreiber (z. B. deine Schule). Du kannst die Verbindung jederzeit in der App entfernen; der Zugang wird dann vom Gerät gelöscht.</p>
+
 <h3>3. Handschrift- und Texterkennung</h3>
 <p>Die Umwandlung von Handschrift in Text erfolgt auf dem Gerät: unter Android mit Google ML Kit (das Sprachmodell wird
 einmalig von Google heruntergeladen, die Erkennung selbst läuft auf dem Gerät), unter Windows mit der
 Handschrifterkennung von Windows. Die Texterkennung in eingefügten Dokumenten (OCR) läuft ebenfalls auf dem Gerät.
 Dabei werden keine Notizinhalte an den Entwickler übertragen.</p>
+
+<h3>3a. Kamera</h3>
+<p>Die Kamera wird nur genutzt, wenn du selbst „Foto aufnehmen“ wählst, um ein Foto oder einen Scan (z. B. einer Tafel oder eines
+Arbeitsblatts) in deine Notizen einzufügen. Unter Android öffnet die App dafür die Kamera-App des Systems (die App selbst hat keine
+Kamera-Berechtigung) und legt eine Kopie des Fotos in deiner Galerie ab; unter Windows nutzt die App die Kamera nur, solange der
+Aufnahmedialog offen ist. Das in die Notiz eingefügte Bild wird neu gespeichert, Ortsangaben und andere Metadaten (EXIF) fallen
+dabei weg. Es bleibt lokal und verlässt das Gerät nur, wenn du den Abgleich mit deinem OneDrive bzw. Google Drive nutzt.</p>
+
+<h3>3b. KI-Funktionen mit eigenem API-Schlüssel (freiwillig)</h3>
+<p>Die App kann optionale KI-Funktionen enthalten (KI-Assistent, KI-Korrektur der Handschrift). Sie sind standardmäßig
+ausgeschaltet und arbeiten nur mit einem <b>eigenen</b> API-Schlüssel, den du selbst bei einem Anbieter besorgst und in der App
+einträgst: Google (Gemini), Anthropic (Claude), OpenAI (ChatGPT) oder xAI (Grok). Nutzt du eine solche Funktion, sendet die App
+die dafür nötigen Inhalte (z. B. deine Frage, markierten Text oder ein Bild der Handschrift) direkt von deinem Gerät an den
+gewählten Anbieter. Es gelten dessen Bedingungen und Datenschutzbestimmungen; bei kostenlosen Schlüsseln kann der Anbieter Eingaben
+zur Verbesserung seiner Dienste nutzen. Der Schlüssel wird nur auf deinem Gerät gespeichert, verschlüsselt im sicheren Speicher des
+Systems (Android Keystore bzw. Windows DPAPI), und nicht abgeglichen. Der Entwickler erhält weder deinen Schlüssel noch deine
+Anfragen oder die Antworten.</p>
 
 <h3>4. Feedback</h3>
 <p>Über den Feedback-Knopf kannst du Wünsche und Fehler senden. Nur wenn du aktiv auf „Senden“ tippst, werden
@@ -88,9 +113,18 @@ Tester freizuschalten und dich zur Beta zu kontaktieren. Die Daten liegen in ein
 Plätze begrenzt. Du kannst deine Einwilligung jederzeit per E-Mail an die oben genannte Adresse widerrufen; dann löschen wir
 deine Daten und entfernen dich aus der Testerliste. Spätestens nach Ende der Beta werden die Anmeldedaten gelöscht.</p>
 
+<h3>4b. Zusammenfassung (Angaben zur Datensicherheit bei Google Play)</h3>
+<p>Daten werden nur erhoben, wenn du selbst eine Funktion nutzt: E-Mail-Adresse und Nutzerkennungen (Feedback, Beta-Anmeldung,
+Anmeldung bei deinem eigenen Cloud-Speicher), Fotos, Dateien und Dokumente sowie sonstige Inhalte wie Handschrift und Notizen
+(Abgleich mit deinem eigenen OneDrive oder Google Drive) und Diagnosedaten (App-Version und Gerätetyp im Feedback). Daten werden
+nicht an Dritte weitergegeben und nicht verkauft. Alle Übertragungen sind verschlüsselt (https). Du kannst die Löschung deiner
+Daten jederzeit per E-Mail an <a href="mailto:mojodojodevteam@gmail.com">mojodojodevteam@gmail.com</a> verlangen; Daten in deinem
+eigenen Cloud-Speicher löschst du dort selbst.</p>
+
 <h3>5. Berechtigungen</h3>
-<p>Die Android-App benötigt nur den Internetzugriff (für OneDrive bzw. Google Drive, das Laden des Handschrift-Sprachmodells und das
-Senden von Feedback). Dateien teilst oder öffnest du über die Funktionen deines Systems.</p>
+<p>Die Android-App benötigt nur den Internetzugriff und den Netzwerkstatus (für OneDrive bzw. Google Drive, Moodle/WebDAV, die
+optionalen KI-Anbieter, das Laden des Handschrift-Sprachmodells und das Senden von Feedback). Für Fotos nutzt sie die Kamera-App
+des Systems ohne eigene Kamera-Berechtigung (siehe 3a). Dateien teilst oder öffnest du über die Funktionen deines Systems.</p>
 
 <h3>6. Keine Werbung, keine Analyse</h3>
 <p>Die App enthält keine Werbung und keine Analyse-, Tracking- oder Absturzberichts-Dienste von Drittanbietern.</p>
@@ -142,10 +176,34 @@ including the Limited Use requirements. The provider is Google; see the
 <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. You can disconnect at any time in the app or
 revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
 
+<h3>2b. Moodle or WebDAV connection (optional)</h3>
+<p>You can connect the app to your school's or university's Moodle learning platform or to a WebDAV storage (e.g. Nextcloud).
+Sign-in happens directly with that website and only over an encrypted connection (https). The address, user name and the access
+credential (Moodle token or app password) are stored on your device, the credential encrypted in the system's secure storage
+(Android Keystore or Windows DPAPI). The app downloads course files from there to your device; Moodle is only read. This data is
+not sent to the developer and is not part of cloud sync. The website's operator (e.g. your school) is responsible for it. You can
+remove the connection in the app at any time; the credential is then deleted from the device.</p>
+
 <h3>3. Handwriting and text recognition</h3>
 <p>Handwriting-to-text conversion runs on the device: on Android with Google ML Kit (the language model is downloaded
 once from Google; recognition itself runs on the device), on Windows with the Windows handwriting recognizer. Text
 recognition (OCR) in inserted documents also runs on the device. No note content is sent to the developer.</p>
+
+<h3>3a. Camera</h3>
+<p>The camera is used only when you choose “Take photo” yourself, to insert a photo or scan (e.g. of a whiteboard or worksheet)
+into your notes. On Android the app opens the system camera app for this (the app itself has no camera permission) and saves a
+copy of the photo to your gallery; on Windows the app uses the camera only while the capture dialog is open. The image inserted
+into the note is re-encoded, which drops location and other metadata (EXIF). It stays local and only leaves the device if you use
+sync with your OneDrive or Google Drive.</p>
+
+<h3>3b. AI features with your own API key (optional)</h3>
+<p>The app may contain optional AI features (AI assistant, AI correction of handwriting). They are off by default and work only
+with your <b>own</b> API key that you obtain from a provider and enter in the app: Google (Gemini), Anthropic (Claude), OpenAI
+(ChatGPT) or xAI (Grok). When you use such a feature, the app sends the content needed for it (e.g. your question, selected text
+or an image of the handwriting) directly from your device to the chosen provider. That provider's terms and privacy policy apply;
+with free keys the provider may use your input to improve its services. The key is stored only on your device, encrypted in the
+system's secure storage (Android Keystore or Windows DPAPI), and is not synced. The developer receives neither your key nor your
+requests or the responses.</p>
 
 <h3>4. Feedback</h3>
 <p>You can send wishes and bug reports with the feedback button. Only when you actively tap “Send”, the following is
@@ -163,9 +221,18 @@ about the beta. The data is kept in a spreadsheet of the developer in Google Dri
 your consent at any time by e-mail to the address above; we will then delete your data and remove you from the tester list.
 Sign-up data is deleted at the latest when the beta ends.</p>
 
+<h3>4b. Summary (Google Play data safety)</h3>
+<p>Data is collected only when you use a feature yourself: e-mail address and user IDs (feedback, beta sign-up, sign-in to your
+own cloud storage), photos, files and documents and other content such as handwriting and notes (sync with your own OneDrive or
+Google Drive), and diagnostics (app version and device type in feedback). Data is not shared with third parties and not sold. All
+transfers are encrypted (https). You can request deletion of your data at any time by e-mail to
+<a href="mailto:mojodojodevteam@gmail.com">mojodojodevteam@gmail.com</a>; data in your own cloud storage you delete there
+yourself.</p>
+
 <h3>5. Permissions</h3>
-<p>The Android app only requires internet access (for OneDrive or Google Drive, downloading the handwriting language model and sending
-feedback). Sharing and opening files uses your system's functions.</p>
+<p>The Android app only requires internet access and network state (for OneDrive or Google Drive, Moodle/WebDAV, the optional AI
+providers, downloading the handwriting language model and sending feedback). For photos it uses the system camera app without a
+camera permission of its own (see 3a). Sharing and opening files uses your system's functions.</p>
 
 <h3>6. No ads, no analytics</h3>
 <p>The app contains no advertising and no third-party analytics, tracking or crash-reporting services.</p>
