@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1064 1064">
+  <!-- Vector Notes: „VN“ mit Bleistift (Vektor-Nachbau von store/icon-quelle.webp) -->
+  <circle cx="532" cy="532" r="532" fill="#1E1F21"/>
+  <path fill="#6E6E6E" d="M110,261 L225,261 L343,497 L463,261 L525,369 L350,727 Z"/>
+  <path fill="#F39A1E" d="M463,261 L575,261 L797,579 L797,704 Z"/>
+  <path fill="#E8861A" d="M428,659 L540,407 L540,727 L428,727 Z"/>
+  <path fill="#F5A623" d="M817,209 H870 A25,25 0 0 1 895,234 V689 H792 V234 A25,25 0 0 1 817,209 Z"/>
+  <path fill="#1C1C1C" d="M792,247 H895 V261 H792 Z"/>
+  <path fill="#D9B48A" d="M792,689 L895,689 L842,819 Z"/>
+  <path fill="#333333" d="M826,774 L858,774 L842,819 Z"/>
+</svg>
