@@ -35,7 +35,7 @@
 </div></header>
 <main id="inhalt"><section class="block"><div class="wrap recht">
 <h1 style="font-size:36px;margin-top:0">Vector Notes</h1>
-<p class="muted">Datenschutzerklärung · Privacy Policy · Stand / Last updated: 06.11.2026</p>
+<p class="muted">Datenschutzerklärung · Privacy Policy · Stand / Last updated: 07.11.2026</p>
 <p><a href="#de">Deutsch</a> · <a href="#en">English</a></p>
 <section id="de">
 <h2>Datenschutzerklärung</h2>
@@ -96,14 +96,30 @@ Aufnahmedialog offen ist. Das in die Notiz eingefügte Bild wird neu gespeichert
 dabei weg. Es bleibt lokal und verlässt das Gerät nur, wenn du den Abgleich mit deinem OneDrive bzw. Google Drive nutzt.</p>
 
 <h3>3b. KI-Funktionen mit eigenem API-Schlüssel (freiwillig)</h3>
-<p>Die App kann optionale KI-Funktionen enthalten (KI-Assistent, KI-Korrektur der Handschrift). Sie sind standardmäßig
-ausgeschaltet und arbeiten nur mit einem <b>eigenen</b> API-Schlüssel, den du selbst bei einem Anbieter besorgst und in der App
-einträgst: Google (Gemini), Anthropic (Claude), OpenAI (ChatGPT) oder xAI (Grok). Nutzt du eine solche Funktion, sendet die App
-die dafür nötigen Inhalte (z. B. deine Frage, markierten Text oder ein Bild der Handschrift) direkt von deinem Gerät an den
-gewählten Anbieter. Es gelten dessen Bedingungen und Datenschutzbestimmungen; bei kostenlosen Schlüsseln kann der Anbieter Eingaben
-zur Verbesserung seiner Dienste nutzen. Der Schlüssel wird nur auf deinem Gerät gespeichert, verschlüsselt im sicheren Speicher des
-Systems (Android Keystore bzw. Windows DPAPI), und nicht abgeglichen. Der Entwickler erhält weder deinen Schlüssel noch deine
-Anfragen oder die Antworten.</p>
+<p>Die App enthält optionale KI-Funktionen: den KI-Assistenten (Fragen zu einem gewählten Ausschnitt deiner Notizen) und die
+KI-Korrektur der Live-Schrift (verbessert den auf dem Gerät erkannten Text). Sie arbeiten nur mit einem <b>eigenen</b> API-Schlüssel,
+den du selbst bei einem Anbieter besorgst und in der App einträgst; in der App ist kein Schlüssel vorbelegt. Die KI-Korrektur ist
+ausgeschaltet, bis du sie selbst einschaltest. Zur Wahl stehen:</p>
+<ul>
+<li>Google (Gemini), Google Ireland Limited – <a href="https://policies.google.com/privacy">Datenschutzerklärung</a>,
+<a href="https://ai.google.dev/gemini-api/terms">Gemini-API-Bedingungen</a></li>
+<li>Anthropic (Claude), Anthropic PBC bzw. Anthropic Ireland, Limited – <a href="https://www.anthropic.com/legal/privacy">Datenschutzerklärung</a></li>
+<li>OpenAI (ChatGPT), OpenAI Ireland Ltd. bzw. OpenAI, L.L.C. – <a href="https://openai.com/policies/privacy-policy">Datenschutzerklärung</a></li>
+<li>xAI (Grok), X.AI LLC – <a href="https://x.ai/legal/privacy-policy">Datenschutzerklärung</a></li>
+</ul>
+<p>Übertragen wird nur, wenn du eine KI-Funktion selbst nutzt: beim KI-Assistenten deine Frage und der von dir gewählte Ausschnitt
+als Bild (bzw. markierter Text), bei der KI-Korrektur der erkannte Text des aktuellen Satzes und, nur wenn du es eigens einschaltest,
+ein Bild deiner Handschrift. Die Inhalte gehen verschlüsselt (https) direkt von deinem Gerät an den gewählten Anbieter, nicht über
+Server des Entwicklers. Der Entwickler hat keinen Zugriff auf deinen Schlüssel, deine Anfragen oder die Antworten. Der Anbieter
+verarbeitet die Daten in eigener Verantwortung auf Grundlage deines Vertrags mit ihm (dein API-Konto); es gelten seine Bedingungen
+und Datenschutzbestimmungen, auch zur Speicherdauer. Anbieter können Daten außerhalb der EU (insbesondere in den USA) verarbeiten.
+Im kostenlosen Kontingent von Gemini darf Google Eingaben zur Verbesserung seiner Dienste nutzen; für vertrauliche Inhalte ist es
+nicht geeignet. Kosten rechnet der Anbieter direkt mit dir ab.</p>
+<p>Rechtsgrundlage für die Übermittlung ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du durch das Einrichten und das
+aktive Nutzen der Funktion erteilst, sowie die Erfüllung deines Vertrags mit dem Anbieter (Art. 6 Abs. 1 lit. b DSGVO). Du kannst
+sie jederzeit widerrufen, indem du die Funktion nicht mehr nutzt, die KI-Korrektur ausschaltest oder den Schlüssel in der App
+entfernst. Der Schlüssel wird nur auf deinem Gerät gespeichert, verschlüsselt im sicheren Speicher des Systems (Android Keystore
+bzw. Windows DPAPI; in der Browser-Fassung im Speicher des Browserprofils), und nie abgeglichen oder gesichert.</p>
 
 <h3>4. Feedback</h3>
 <p>Über den Feedback-Knopf kannst du Wünsche und Fehler senden. Nur wenn du aktiv auf „Senden“ tippst, werden
@@ -126,8 +142,9 @@ deine Daten und entfernen dich aus der Testerliste. Spätestens nach Ende der Be
 <h3>4b. Zusammenfassung (Angaben zur Datensicherheit bei Google Play)</h3>
 <p>Daten werden nur erhoben, wenn du selbst eine Funktion nutzt: E-Mail-Adresse und Nutzerkennungen (Feedback, Beta-Anmeldung,
 Anmeldung bei deinem eigenen Cloud-Speicher), Fotos, Dateien und Dokumente sowie sonstige Inhalte wie Handschrift und Notizen
-(Abgleich mit deinem eigenen OneDrive oder Google Drive) und Diagnosedaten (App-Version und Gerätetyp im Feedback). Daten werden
-nicht an Dritte weitergegeben und nicht verkauft. Alle Übertragungen sind verschlüsselt (https). Du kannst die Löschung deiner
+(Abgleich mit deinem eigenen OneDrive oder Google Drive) und Diagnosedaten (App-Version und Gerätetyp im Feedback). Nutzt du die optionalen KI-Funktionen, gehen deine Frage, der gewählte
+Ausschnitt bzw. der erkannte Text (auf Wunsch ein Bild der Handschrift) auf deine Veranlassung direkt an den von dir gewählten
+KI-Anbieter (siehe 3b). Darüber hinaus werden Daten nicht an Dritte weitergegeben und nicht verkauft. Alle Übertragungen sind verschlüsselt (https). Du kannst die Löschung deiner
 Daten jederzeit per E-Mail an <a href="mailto:mojodojodevteam@gmail.com">mojodojodevteam@gmail.com</a> verlangen; Daten in deinem
 eigenen Cloud-Speicher löschst du dort selbst.</p>
 
@@ -207,13 +224,29 @@ into the note is re-encoded, which drops location and other metadata (EXIF). It 
 sync with your OneDrive or Google Drive.</p>
 
 <h3>3b. AI features with your own API key (optional)</h3>
-<p>The app may contain optional AI features (AI assistant, AI correction of handwriting). They are off by default and work only
-with your <b>own</b> API key that you obtain from a provider and enter in the app: Google (Gemini), Anthropic (Claude), OpenAI
-(ChatGPT) or xAI (Grok). When you use such a feature, the app sends the content needed for it (e.g. your question, selected text
-or an image of the handwriting) directly from your device to the chosen provider. That provider's terms and privacy policy apply;
-with free keys the provider may use your input to improve its services. The key is stored only on your device, encrypted in the
-system's secure storage (Android Keystore or Windows DPAPI), and is not synced. The developer receives neither your key nor your
-requests or the responses.</p>
+<p>The app contains optional AI features: the AI assistant (questions about a selected part of your notes) and AI correction of
+live writing (improves the text recognized on the device). They work only with your <b>own</b> API key that you obtain from a
+provider and enter in the app; no key is preset in the app. AI correction stays off until you turn it on yourself. The available
+providers are:</p>
+<ul>
+<li>Google (Gemini), Google Ireland Limited – <a href="https://policies.google.com/privacy">privacy policy</a>,
+<a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a></li>
+<li>Anthropic (Claude), Anthropic PBC or Anthropic Ireland, Limited – <a href="https://www.anthropic.com/legal/privacy">privacy policy</a></li>
+<li>OpenAI (ChatGPT), OpenAI Ireland Ltd. or OpenAI, L.L.C. – <a href="https://openai.com/policies/privacy-policy">privacy policy</a></li>
+<li>xAI (Grok), X.AI LLC – <a href="https://x.ai/legal/privacy-policy">privacy policy</a></li>
+</ul>
+<p>Data is sent only when you use an AI feature yourself: for the AI assistant your question and the area you selected as an image
+(or selected text); for AI correction the recognized text of the current sentence and, only if you turn this on separately, an
+image of your handwriting. The content goes encrypted (https) directly from your device to the chosen provider, not through
+servers of the developer. The developer has no access to your key, your requests or the responses. The provider processes the
+data under its own responsibility on the basis of your contract with it (your API account); its terms and privacy policy apply,
+including retention. Providers may process data outside the EU (in particular in the USA). On the Gemini free tier Google may
+use your input to improve its services; it is not suitable for confidential content. The provider bills any costs directly to you.</p>
+<p>The legal basis for the transfer is your consent (Art. 6(1)(a) GDPR), which you give by setting up and actively using the
+feature, and the performance of your contract with the provider (Art. 6(1)(b) GDPR). You can withdraw it at any time by no longer
+using the feature, turning off AI correction or removing the key in the app. The key is stored only on your device, encrypted in
+the system's secure storage (Android Keystore or Windows DPAPI; in the browser version in the browser profile's storage), and is
+never synced or backed up.</p>
 
 <h3>4. Feedback</h3>
 <p>You can send wishes and bug reports with the feedback button. Only when you actively tap “Send”, the following is
@@ -234,7 +267,9 @@ Sign-up data is deleted at the latest when the beta ends.</p>
 <h3>4b. Summary (Google Play data safety)</h3>
 <p>Data is collected only when you use a feature yourself: e-mail address and user IDs (feedback, beta sign-up, sign-in to your
 own cloud storage), photos, files and documents and other content such as handwriting and notes (sync with your own OneDrive or
-Google Drive), and diagnostics (app version and device type in feedback). Data is not shared with third parties and not sold. All
+Google Drive), and diagnostics (app version and device type in feedback). If you use the optional AI features, your question, the selected area or the recognized
+text (optionally an image of your handwriting) go at your request directly to the AI provider you chose (see 3b). Beyond that,
+data is not shared with third parties and not sold. All
 transfers are encrypted (https). You can request deletion of your data at any time by e-mail to
 <a href="mailto:mojodojodevteam@gmail.com">mojodojodevteam@gmail.com</a>; data in your own cloud storage you delete there
 yourself.</p>
